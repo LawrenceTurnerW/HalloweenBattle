@@ -16,7 +16,7 @@ public class TestScript : MonoBehaviour
         // 指定したボタンが押されたら
         if (OVRInput.GetDown(inputBtn))
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 // ballをcontrolPointの位置と角度に合わせて生成する
                 Instantiate(ball, controlPoint.transform.position, Quaternion.identity);
