@@ -566,7 +566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 1150121151}
-  inputBtn: 67108864
+  launchTrigger: 67108864
+  powerTrigger: 134217728
   shot: {fileID: 2458806858080370779, guid: bc83c33bcf4b33e428c67ffc4411e813, type: 3}
   audioClip: {fileID: 8300000, guid: 1908f8b67a05cb64b8ce6ed3b6a8b279, type: 3}
 --- !u!1 &817496003

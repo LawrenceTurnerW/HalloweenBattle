@@ -5,8 +5,11 @@ public class Magic : MonoBehaviour
     // ここで指定したオブジェクトの位置や角度を基準にする
     [SerializeField] private GameObject launchPoint;
 
-    // 入力ボタンフィールをを作成できる
-    [SerializeField] private OVRInput.RawButton inputBtn;
+    // 発射トリガー入力
+    [SerializeField] private OVRInput.RawButton launchTrigger;
+
+    // 強化入力トリガー
+    [SerializeField] private OVRInput.RawButton powerTrigger;
 
     // 生成するオブジェクト
     [SerializeField] private GameObject shot;
@@ -17,8 +20,8 @@ public class Magic : MonoBehaviour
 
     private void Update()
     {
-        // 指定したボタンが押されたら
-        if (OVRInput.GetDown(inputBtn))
+        // 発射トリガーが押されたら
+        if (OVRInput.GetDown(launchTrigger))
         {
             // 効果音を鳴らす
             audioSource = launchPoint.GetComponent<AudioSource>();
@@ -28,8 +31,14 @@ public class Magic : MonoBehaviour
             // かぼちゃをcontrolPointの位置と角度に合わせて生成する
             GameObject _pumpkin = Instantiate(shot, launchPoint.transform.position, launchPoint.transform.rotation);
 
+            float power = 5.0f;
+            // もし強化入力が追加で行われていれば
+            if (OVRInput.Get(powerTrigger))
+            {
+                power = power * 2;
+            }
             Rigidbody rb = _pumpkin.GetComponent<Rigidbody>();// rigidbodyを取得
-            rb.AddForce(_pumpkin.transform.forward * 10f, ForceMode.Impulse);// 前方に力を加える
+            rb.AddForce(_pumpkin.transform.forward * power, ForceMode.Impulse);// 前方に力を加える
         }
     }
 }
