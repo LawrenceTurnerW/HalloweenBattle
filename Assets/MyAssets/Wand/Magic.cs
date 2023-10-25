@@ -11,11 +11,20 @@ public class Magic : MonoBehaviour
     // 生成するオブジェクト
     [SerializeField] private GameObject shot;
 
+    // かぼちゃ発射時の効果音
+    [SerializeField] private AudioClip audioClip;
+    private AudioSource audioSource;
+
     private void Update()
     {
         // 指定したボタンが押されたら
         if (OVRInput.GetDown(inputBtn))
         {
+            // 効果音を鳴らす
+            audioSource = launchPoint.GetComponent<AudioSource>();
+            audioSource.clip = audioClip;
+            audioSource.Play();
+
             // かぼちゃをcontrolPointの位置と角度に合わせて生成する
             GameObject _pumpkin = Instantiate(shot, launchPoint.transform.position, launchPoint.transform.rotation);
 
