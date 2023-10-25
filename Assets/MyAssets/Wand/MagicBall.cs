@@ -13,6 +13,9 @@ public class MagicBall : MonoBehaviour
     [SerializeField] private GameObject sweet5;
     [SerializeField] private GameObject sweet6;
 
+    // 笑い声を生成するオブジェクト
+    [SerializeField] private GameObject witchsLaughter;
+
     private void Start()
     {
         // TODO：生成して暫くしたら球を削除する
@@ -24,13 +27,17 @@ public class MagicBall : MonoBehaviour
         // TODO:Conatainsで検索するのを修正する
         if (collision.gameObject.name.Contains("ghost"))
         {
+            // 魔女の笑い声を生成
+            GameObject s_laugh = Instantiate(witchsLaughter, this.transform.position, this.transform.rotation);
+            Destroy(s_laugh.gameObject, 3f);
+
             CreateSweet(sweet1);
             CreateSweet(sweet2);
             CreateSweet(sweet3);
             CreateSweet(sweet4);
             CreateSweet(sweet5);
             CreateSweet(sweet6);
-            // まずおばけを削除
+            // おばけを削除
             Destroy(collision.gameObject);
 
             //その後自身を削除

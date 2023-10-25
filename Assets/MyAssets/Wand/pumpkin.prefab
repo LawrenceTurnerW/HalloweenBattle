@@ -149,3 +149,4 @@ MonoBehaviour:
   sweet4: {fileID: 7448837567362319217, guid: dd92d60309b12d744b8ac59707f12cb5, type: 3}
   sweet5: {fileID: 6324630206288245790, guid: 57c40c0a6925f4a44a52869aa021238a, type: 3}
   sweet6: {fileID: 6431199807715590848, guid: 040c1951606d9ec4283752de35be5ae7, type: 3}
+  witchsLaughter: {fileID: 11891518934318655, guid: be5d27ec4da2c5c4682949bc1cc0dc35, type: 3}
