@@ -18,7 +18,8 @@ public class MagicBall : MonoBehaviour
 
     private void Start()
     {
-        // TODO：生成して暫くしたら球を削除する
+        //3秒後に自身を削除
+        Destroy(this.gameObject, 1f);
     }
 
     private void OnCollisionEnter(Collision collision)
