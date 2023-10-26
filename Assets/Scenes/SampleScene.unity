@@ -444,26 +444,6 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &633987594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 747806495401477014, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
-  m_PrefabInstance: {fileID: 2072274080}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &633987598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633987594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb4c31b7c97f14c928321f46042157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerEye: {fileID: 1577749883}
-  span: 5
-  ghost: {fileID: 8542829784571220465, guid: 3d35ed8f309d2c545b09b34c00587714, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +479,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -569,6 +549,7 @@ GameObject:
   - component: {fileID: 782628377}
   - component: {fileID: 782628376}
   - component: {fileID: 782628378}
+  - component: {fileID: 782628379}
   m_Layer: 0
   m_Name: ScriptControll
   m_TagString: Untagged
@@ -624,6 +605,21 @@ MonoBehaviour:
   shot: {fileID: 2458806858080370779, guid: bc83c33bcf4b33e428c67ffc4411e813, type: 3}
   audioClip: {fileID: 8300000, guid: 1908f8b67a05cb64b8ce6ed3b6a8b279, type: 3}
   particleObject: {fileID: 3860885217292704701, guid: d2fab08d68faf504392a9945aebb39d0, type: 3}
+--- !u!114 &782628379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb4c31b7c97f14c928321f46042157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerEye: {fileID: 1577749883}
+  span: 2
+  ghost: {fileID: 8542829784571220465, guid: 3d35ed8f309d2c545b09b34c00587714, type: 3}
 --- !u!1 &817496003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,10 +1511,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 747806495401477014, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 633987598}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c813208e672e3074bbe118e1a9ee94fd, type: 3}
 --- !u!4 &858102586902271448 stripped
 Transform:

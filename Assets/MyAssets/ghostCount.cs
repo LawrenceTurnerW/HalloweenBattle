@@ -6,7 +6,7 @@ public class ghostCount : MonoBehaviour
     [SerializeField] private GameObject centerEye;
 
     // 間隔
-    [SerializeField] private float span = 3f;
+    [SerializeField] private float span = 2f;
 
     // おばけ
     [SerializeField] private GameObject ghost;
