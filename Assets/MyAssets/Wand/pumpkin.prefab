@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 924195af0d4968e4ebd20a4d1ed31faf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 924195af0d4968e4ebd20a4d1ed31faf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 924195af0d4968e4ebd20a4d1ed31faf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 924195af0d4968e4ebd20a4d1ed31faf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -150,3 +150,4 @@ MonoBehaviour:
   sweet5: {fileID: 6324630206288245790, guid: 57c40c0a6925f4a44a52869aa021238a, type: 3}
   sweet6: {fileID: 6431199807715590848, guid: 040c1951606d9ec4283752de35be5ae7, type: 3}
   witchsLaughter: {fileID: 11891518934318655, guid: be5d27ec4da2c5c4682949bc1cc0dc35, type: 3}
+  particleObject: {fileID: 1096363303712563166, guid: 06d19fb1c7470ee43b47d43023856adc, type: 3}

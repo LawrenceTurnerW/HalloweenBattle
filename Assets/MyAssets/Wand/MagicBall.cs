@@ -16,6 +16,9 @@ public class MagicBall : MonoBehaviour
     // 笑い声を生成するオブジェクト
     [SerializeField] private GameObject witchsLaughter;
 
+    // 倒した際のパーティクル
+    [SerializeField] private GameObject particleObject;
+
     private void Start()
     {
         //3秒後に自身を削除
@@ -28,6 +31,10 @@ public class MagicBall : MonoBehaviour
         // TODO:Conatainsで検索するのを修正する
         if (collision.gameObject.name.Contains("ghost"))
         {
+            // パーティクルを発生させる,1秒後に削除
+            GameObject _particle = Instantiate(particleObject, this.transform.position, this.transform.rotation);
+            Destroy(_particle, 1f);
+
             // 魔女の笑い声を生成
             GameObject s_laugh = Instantiate(witchsLaughter, this.transform.position, this.transform.rotation);
             Destroy(s_laugh.gameObject, 3f);

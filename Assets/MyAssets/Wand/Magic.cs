@@ -18,6 +18,9 @@ public class Magic : MonoBehaviour
     [SerializeField] private AudioClip audioClip;
     private AudioSource audioSource;
 
+    // 発射時のパーティクル
+    [SerializeField] private GameObject particleObject;
+
     private void Update()
     {
         // 発射トリガーが押されたら
@@ -27,6 +30,10 @@ public class Magic : MonoBehaviour
             audioSource = launchPoint.GetComponent<AudioSource>();
             audioSource.clip = audioClip;
             audioSource.Play();
+
+            // パーティクルを発生させる,1秒後に削除
+            GameObject _particle = Instantiate(particleObject, launchPoint.transform.position, launchPoint.transform.rotation);
+            Destroy(_particle, 1f);
 
             // かぼちゃをcontrolPointの位置と角度に合わせて生成する
             GameObject _pumpkin = Instantiate(shot, launchPoint.transform.position, launchPoint.transform.rotation);
